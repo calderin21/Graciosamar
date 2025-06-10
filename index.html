@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GRACIOSAMAR</title>
+    <link rel="stylesheet" href="./estilos/graciosamar.css">
+    <script src="https://kit.fontawesome.com/8939c60b7e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- BOTÓN SUBIR -->
+    <div id="boton_subir">
+        <a href="#arriba"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN ESCRITORIO -->
+    <div id="nav_escritorio">
+        <h1 class="titulo">Apartamentos Graciosamar</h1>
+        <ul>
+            <a href="#datos"><li><i class="fa-solid fa-calendar-days"></i> Reservar</li></a>
+            <a href="#contenido_principal"><li><i class="fa-solid fa-hotel"></i> Apartamentos</li></a>
+            <a href="#lugares"><li><i class="fa-solid fa-key"></i> Sercicios</li></a>
+            <a href="#contacto"><li><i class="fa-solid fa-envelope"></i> Contacto</li></a>
+            <a href="#tarifas"><li><i class="fa-solid fa-credit-card"></i> Tarifas</li></a>
+            <a href="#"><li><i class="fa-solid fa-map-location-dot"></i> Ubicación</li></a>
+            <a href="#"><li><i class="fa-solid fa-phone-flip"></i> +34 673 383 958</li></a>
+        </ul>
+    </div>
+    <!-- BARRA DE NAVEGACIÓN MÓVIL -->
+    <div id="nav_movil">
+        <h1 class="titulo">Apartamentos Graciosamar</h1>
+        <div id="boton_menu"><i class="fa-solid fa-bars" onclick="click_menu()"></i></div>
+    </div>
+    <nav id="desplegable">
+        <ul>
+            <a href="#datos"><li><i class="fa-solid fa-calendar-days"></i> Reservar</li></a>
+            <a href="#contenido_principal"><li><i class="fa-solid fa-hotel"></i> Apartamentos</li></a>
+            <a href="#lugares"><li><i class="fa-solid fa-key"></i> Sercicios</li></a>
+            <a href="#contacto"><li><i class="fa-solid fa-envelope"></i> Contacto</li></a>
+            <a href="#tarifas"><li><i class="fa-solid fa-credit-card"></i> Tarifas</li></a>
+            <a href="#"><li><i class="fa-solid fa-map-location-dot"></i> Ubicación</li></a>
+            <a href="#"><li><i class="fa-solid fa-phone-flip"></i> +34 673 383 958</li></a>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header id="arriba">
+        <div class="texto_sobre">
+            <h2 class="titulo2">Apartamentos Graciosamar</h2>
+            <h3 class="titulo3">RESERVA TUS PRÓXIMAS VACACIONES DE ENSUEÑO EN LA GRACIOSA</h3>
+        </div>
+    </header>
+
+    <!-- CARACTERÍSTICAS -->
+    <div id="datos">
+        <div id="precio"><p>Desde 55€<span class="texto_precio">/noche</span></p></div>
+        <div id="caracteristicas">
+            <ul>
+                <li><i class="fa-solid fa-people-roof"></i> Hasta 5 Huéspedes</li>
+                <li><i class="fa-solid fa-cart-flatbed-suitcase"></i> 2 Habitaciones</li>
+                <li><i class="fa-solid fa-shower"></i> 1 o 2 Baños</li>
+                <li><i class="fa-solid fa-wifi"></i> Wifi</li>
+            </ul>
+        </div>
+        <div id="boton_info">
+            <button>Más info</button>
+        </div>
+    </div>
+
+    <!-- CARRUSEL -->
+    <div id="carrusel" onmouseover="temporizador('desactivar')" onmouseout="temporizador('activar')">
+        <div id="tira_imagenes">
+            <div class="contenedor_imagen"><img src="./img/01_1920.webp" 
+                srcset="./img/01_1920.webp 1920w, ./img/01_750.webp 1080w, ./img/01.webp 640w"  alt=""></div>
+            <div class="contenedor_imagen"><img src="./img/02_1920.webp" 
+                srcset="./img/02_1920.webp 1920w, ./img/02_750.webp 1080w, ./img/02.webp 640w"  alt=""></div>
+            <div class="contenedor_imagen"><img src="./img/03_1920.webp" 
+                srcset="./img/03_1920.webp 1920w, ./img/03_750.webp 1080w, ./img/03.webp 640w"  alt=""></div>
+            <div class="contenedor_imagen"><img src="./img/04_1920.webp" 
+                srcset="./img/04_1920.webp 1920w, ./img/04_750.webp 1080w, ./img/04.webp 640w"  alt=""></div>
+            <div class="contenedor_imagen"><img src="./img/05_1920.webp" 
+                srcset="./img/05_1920.webp 1920w, ./img/05_750.webp 1080w, ./img/05.webp 640w"  alt=""></div>            
+            <div class="contenedor_imagen"><img src="./img/06_1920.webp" 
+                srcset="./img/06_1920.webp 1920w, ./img/06_750.webp 1080w, ./img/06.webp 640w"  alt=""></div>            
+            <div class="contenedor_imagen"><img src="./img/07_1920.webp" 
+                srcset="./img/07_1920.webp 1920w, ./img/07_750.webp 1080w, ./img/07.webp 640w"  alt=""></div>
+            <div class="contenedor_imagen"><img src="./img/08_1920.webp" 
+                srcset="./img/08_1920.webp 1920w, ./img/08_750.webp 1080w, ./img/08.webp 640w"  alt=""></div>        
+            </div>
+        <div id="boton_carrusel_izquierda" onclick="mover('izquierda', 'contenedor1', 5000)"><i class="fas fa-angle-left"></i></div>
+        <div id="boton_carrusel_derecha" onclick="mover('derecha')"><i class="fas fa-angle-right"></i></div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido_principal" class="scroll-content fadeTop">
+        <div id="contenido_principal" >
+                
+            <img  src="./img/playa_escritorio_1920.webp"
+            srcset="./img/playa_escritorio_1920.webp 1920w, ./img/playa_tablet_1080.webp 1080w, ./img/playa_movil_640.webp 640w " />
+    </div>
+        <article id="contenido_imagen">
+            <h3>Te damos la bienvenida a Apartamentos Graciosamar en la privilegiada Isla de La Graciosa donde disfrutar de tus vacaciones será un recuerdo inolvidable.</h3>
+            <p>GraciosaMar se compone de 6 apartamentos, 2 dúplex y una pequeña casa. Los apartamentos están ubicados en “Caleta de Sebo” a pocos minutos del muelle, las playas y de varios supermercados y restaurantes de la zona.</p>
+            <p>Todos los apartamentos se distribuyen en dos dormitorios, uno con cama doble y el otro con dos camas individuales, amplio salón-cocina totalmente equipada, terraza y 1 o 2 baños.</p>
+            <p>Un lugar ideal para sus vacaciones donde podrá descansar y disfrutar de la naturaleza, las playas y el buen tiempo.</p>
+        </article>
+    </main>
+
+<!-- LUGARES -->
+    <div id="lugares" class="scroll-content fadeBottom">
+        <section>
+            <p id="sobre"><i class="fas fa-home"></i></p>
+            <h5>LUGARES PARA DORMIR</h5>
+            <hr>
+            <p id="texto-contacto">Todos los apartamentos tienen capacidad para 4 personas con opción de añadir una persona extra en cama supletoria con cargo según la temporada.</p>
+
+            <div id="caja-lugares">
+                <div class="elemento-lugares">
+                    <p id="sobre"><i class="fas fa-bed"></i></p>
+                    <h5>DORMITORIO 1</h5>
+                
+                    <p id="texto-contacto">1 Cama doble</p>   
+                </div>
+                <div class="elemento-lugares">
+                    <p id="sobre"><i class="fas fa-square"></i><i class="fas fa-square"></i></p>
+                    <h5>DORMITORIO 2</h5>
+                    
+                    <p id="texto-contacto">2 Camas individuales</p>  
+                </div>
+                <div class="elemento-lugares">
+                    <p id="sobre"><i class="fas fa-bed"></i></p>
+                    <h5>SALÓN</h5>
+                    
+                    <p id="texto-contacto">1 Cama supletoria</p>
+                </div>
+            </div>        
+
+        </section>
+    </div>
+
+    <!-- CONTACTO -->
+    <div id="contacto" class="scroll-content fadeRight">
+        <section>
+            <p id="sobre"><i class="fas fa-envelope"></i></p>
+            <h5>CONTACTO</h5>
+            <hr>
+            <p id="texto-contacto">Si quiere enviarnos un mensaje rellene el formulario y en breve nos pondremos en contacto con usted.</p>
+            <form action="">
+                <input type="text" class="input-contacto" placeholder="Nombre">
+                <input type="text" class="input-contacto" placeholder="Email">
+                <input type="text" class="input-contacto" placeholder="Preguntas/Comentarios">
+                <input type="submit" class="boton-contacto">
+            </form>
+
+        </section>
+    </div>
+    <!-- TARIFAS -->
+    <div id="tarifas" class="scroll-content fadeLeft">
+        <section>
+            <p id="sobre"><i class="fas fa-credit-card"></i></p>
+            <h5>TARIFAS</h5>
+            <hr>
+            <!-- CAJA TEMPORADA ALTA -->
+            <div class="detalles-tarifas impar">
+                <div class="temporadas">
+                    <p>Temporada Alta</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            <!-- CAJA TEMPORADA MEDIA -->
+            <div class="detalles-tarifas par">
+                <div class="temporadas">
+                    <p>Temporada Media</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            <!-- CAJA TEMPORADA BAJA -->
+            <div class="detalles-tarifas impar">
+                <div class="temporadas">
+                    <p>Temporada Baja</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            <!-- CAJA SEMANA SANTA -->
+            <div class="detalles-tarifas par">
+                <div class="temporadas">
+                    <p>Semana Santa</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            <!-- CAJA NAVIDAD -->
+            <div class="detalles-tarifas impar">
+                <div class="temporadas">
+                    <p>Navidad</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            <!-- CAJA CARGO LIMPIEZA -->
+            <div class="detalles-tarifas par">
+                <div class="temporadas">
+                    <p>Cargo obligatorio de limpieza</p>
+                </div>
+                <div class="tiempo-temporada">
+                    <p>1 de Julio al 30 de Septiembre</p>
+                </div>
+                <div class="caja-temporada">
+                    <p><span class="texto-temporada">Desde 70€/</span>noche</p>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <footer>
+        <p>COPYRIGHT © APARTAMENTOS GRACIOSAMAR 2019 – ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+    <script src="./script/graciosamar.js"></script>
+</body>
+</html>
