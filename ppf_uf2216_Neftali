@@ -1,0 +1,19 @@
+cd /var/www/html 
+git clone https://github.com/calderin21/Graciosamar.git
+cd Graciosamar/
+git branch -a 
+git checkout -b neftali 
+touch README.md 
+	git add .
+	git commit -m "Creacion del README"
+	git push --set-upstream  https://github.com/calderin21/Graciosamar.git
+
+2. nano  Manual.md 
+   git add .
+   git commit -m  "Creacion del Manual"
+   git push 
+
+   rm Manual.md 
+   git add .
+   git commit -m "Creacion, modificacion y eliminacion de archivos de prueba"
+   git push 
